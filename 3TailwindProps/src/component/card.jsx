@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 function Card({productName}) {
-    console.log(productName);
+  
     
   return (
     <div className="flex font-sans">
