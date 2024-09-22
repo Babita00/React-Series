@@ -1,6 +1,59 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent vertical scrolling */
+}
+h1 {
+  color: pink;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Spacing between buttons */
+  justify-content: center;
+}
+/* for putting button in buttom */
+/*
+.container {
+  display: flex;
+  gap: 10px;
+  justify-content: center; 
+  position: absolute;
+  bottom: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+*/
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 15px;
+}
+.white {
+  background-color: white;
+}
+.black {
+  background-color: black;
+  color: white;
+}
+.blue {
+  background-color: blue;
+}
+.red {
+  background-color: red;
+}
+.olive {
+  background-color: olive;
+}
+.green {
+  background-color: green;
+}
+.purple {
+  background-color: purple;
+}
+.lavender {
+  background-color: lavender;
 }
