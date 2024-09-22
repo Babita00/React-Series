@@ -17,3 +17,4 @@ git clone https://github.com/yourusername/yourproject.git
 cd yourproject
 npm install
 npm start
+npm run dev
