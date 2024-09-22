@@ -11,9 +11,10 @@ body {
 }
 
 .theme {
-  padding: 10px 20px;
+  padding: 5px 5px;
   font-size: 16px;
   border-radius: 15px;
+  border: none;
   cursor: pointer; /* Change cursor to pointer */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
   position: absolute; /* Position the button absolutely */
