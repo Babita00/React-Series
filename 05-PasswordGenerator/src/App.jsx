@@ -24,6 +24,9 @@ if(character){
 for (let i = 1; i < length; i++) {
   const randomIndex = Math.floor(Math.random() * str.length+1);
   pass += str[randomIndex];
+  //or
+  // pass += str.charAt(randomIndex);
+
 }
 setPassword(pass); 
 },[length,number,character,setPassword])
