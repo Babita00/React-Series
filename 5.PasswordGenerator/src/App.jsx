@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       
-      
+      <h1>Password generator</h1>
     </>
   )
 }
