@@ -1,6 +1,35 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.Container {
+  padding: 16px;
+  width: 600px;
+  height: 200px;
+  margin: auto;
+  background-color: rgb(236, 229, 229);
+}
+
+.inputfield {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+.inputfield input {
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  flex-grow: 1; /* Make input take available space */
+}
+.inputfield button {
+  background-color: rgb(24, 24, 171);
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.newContainer {
+  padding-top: 10px;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.length {
+  cursor: pointer; /* Change cursor to pointer */
 }
