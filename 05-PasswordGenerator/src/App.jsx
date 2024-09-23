@@ -61,11 +61,11 @@ passwordGenerator()
       
       <div className='Container'>
         <div className="inputfield">
-        <input type="text" value={password} placeholder='password' readOnly ref={passwordRef}/>
 
-        <button  onClick={copyPasswordToClipboard}>Copy</button>
         {copied && <span className="copied-text">Copied!</span>} {/* Show "Copied!" message */}
-
+        <input type="text" value={password} placeholder='password' readOnly ref={passwordRef}/>
+        <button  onClick={copyPasswordToClipboard}>Copy</button>
+       
         </div>
 
 
