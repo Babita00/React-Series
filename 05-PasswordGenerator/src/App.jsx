@@ -1,6 +1,7 @@
 import { useCallback } from 'react';
 import { useState } from 'react'
 import { useEffect } from 'react';
+import { useRef } from 'react';
 import './App.css'
 
 function App() {
@@ -8,6 +9,10 @@ const [length,setLength]=useState(8)
 const [number,setNumber]=useState(false);
 const[character,setCharacter]=useState(false)
 const[password,setPassword]=useState("")
+const [copied, setCopied] = useState(false); // Track if password is copied
+
+//use ref hook
+const passwordRef=useRef(null)
 
 
 const passwordGenerator=useCallback(()=>{
@@ -31,6 +36,19 @@ for (let i = 1; i < length; i++) {
 setPassword(pass); 
 },[length,number,character,setPassword])
 
+//working of copyPasswordToClipboard
+
+const copyPasswordToClipboard=useCallback(()=>{
+  passwordRef.current?.select()
+  //if you have to select specified location only
+  // passwordRef.current?.setSelectionRange(3,7)
+window.navigator.clipboard.writeText(password)
+setCopied(true); // Set copied state to true
+setTimeout(() => {
+  setCopied(false);
+}, 2000);
+
+},[password])
 
 useEffect(()=>{
 passwordGenerator()
@@ -43,8 +61,11 @@ passwordGenerator()
       
       <div className='Container'>
         <div className="inputfield">
-        <input type="text" value={password} placeholder='password' readOnly/>
-        <button>Copy</button>
+        <input type="text" value={password} placeholder='password' readOnly ref={passwordRef}/>
+
+        <button  onClick={copyPasswordToClipboard}>Copy</button>
+        {copied && <span className="copied-text">Copied!</span>} {/* Show "Copied!" message */}
+
         </div>
 
 

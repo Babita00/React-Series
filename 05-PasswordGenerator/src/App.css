@@ -9,7 +9,9 @@
 .inputfield {
   display: flex;
   align-items: center; /* Align items vertically */
+  gap: 1.5px;
 }
+
 .inputfield input {
   width: 400px;
   border: 1px solid #ccc;
@@ -22,8 +24,11 @@
   color: white;
   padding: 8px;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
-
+.inputfield button:hover {
+  background-color: rgb(68, 68, 251);
+}
 .newContainer {
   padding-top: 10px;
   gap: 20px;
