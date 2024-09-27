@@ -1,6 +1,6 @@
 
 import './App.css'
-
+import { InputBox } from './components/InputBox.js'
 function App() {
   
 
