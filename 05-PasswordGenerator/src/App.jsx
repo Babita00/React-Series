@@ -36,8 +36,9 @@ for (let i = 1; i < length; i++) {
 setPassword(pass); 
 },[length,number,character,setPassword])
 
-//working of copyPasswordToClipboard
 
+
+//working of copyPasswordToClipboard
 const copyPasswordToClipboard=useCallback(()=>{
   passwordRef.current?.select()
   //if you have to select specified location only
