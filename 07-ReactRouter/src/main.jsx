@@ -9,6 +9,7 @@ import About from './Components/About/About';
 import Contact from "./Components/Contact/Contact"
 import User from "./Components/User/User"
 import { createBrowserRouter, createRoutesFromElements, RouterProvider,Route } from 'react-router-dom'
+import Github from './Components/Github/Github';
 
 // const router=createBrowserRouter([{
 //   path:"/",
@@ -34,6 +35,7 @@ const router=createBrowserRouter(
       <Route path="about" element={<About/>}></Route>
       <Route path="contact" element={<Contact/>}></Route>
       <Route path="user/:id" element={<User/>}></Route>
+      <Route path="github" element={<Github/>}></Route>
 
   </Route>
   )
