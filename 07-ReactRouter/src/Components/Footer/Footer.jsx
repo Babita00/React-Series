@@ -1,7 +1,7 @@
 import{Link} from 'react-router-dom'
 
 
-export default function Footer() {
+function Footer() {
     return (
         <footer className="bg-white border-y">
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -160,3 +160,5 @@ export default function Footer() {
         </footer>
     );
 }
+
+export  default Footer
