@@ -3,26 +3,41 @@ import ReactDOM from 'react-dom/client';
 // import { createRoot } from 'react-dom/client'
 // import App from './App.jsx'
 import './index.css'
-import Route from './route';
+import Router from './Router';
 import Home from "./Components/Home/Home"
 import About from './Components/About/About';
 import Contact from "./Components/Contact/Contact"
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import User from "./Components/User/User"
+import { createBrowserRouter, createRoutesFromElements, RouterProvider,Route } from 'react-router-dom'
 
-const router=createBrowserRouter([{
-  path:"/",
-  element:<Route/>,
-  children:[{
-    path:"home",
-    element:<Home/>
-  },{
-    path:"about",
-    element:<About/>
-  },{
-    path:"contact",
-    element:<Contact/>
-  }]
-}])
+// const router=createBrowserRouter([{
+//   path:"/",
+//   element:<Router/>,
+//   children:[{
+//     path:"home",
+//     element:<Home/>
+//   },{
+//     path:"about",
+//     element:<About/>
+//   },{
+//     path:"contact",
+//     element:<Contact/>
+//   }]
+// }])
+
+//OR
+
+const router=createBrowserRouter(
+  createRoutesFromElements(
+  <Route path="/" element={<Router/>}>
+      <Route path="home" element={<Home/>}></Route>
+      <Route path="about" element={<About/>}></Route>
+      <Route path="contact" element={<Contact/>}></Route>
+      <Route path="user/:id" element={<User/>}></Route>
+
+  </Route>
+  )
+)
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
