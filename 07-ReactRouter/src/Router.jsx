@@ -4,7 +4,7 @@ import Footer from './Components/Footer/Footer.jsx';
 import { Outlet } from "react-router-dom";
 
 
-function Route() {
+function Router() {
   return (
     <>
     <Header/>
@@ -16,4 +16,4 @@ function Route() {
 }
 
 
-export default Route
+export default Router
