@@ -1,13 +1,12 @@
 import './App.css'
-import ThemeChange from "./component/Theme/ThemeChange";
-
+// import ThemeChange from "./component/Theme/ThemeChange";
+import UserContextProvider from "./context/UserContextProvider"
 function App() {
 
   return (
-    <>
-    <ThemeChange/>
+    <UserContextProvider>
     
-    </>
+    </UserContextProvider>
   )
 }
 
