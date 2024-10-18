@@ -15,6 +15,7 @@ const [copied, setCopied] = useState(false); // Track if password is copied
 const passwordRef=useRef(null)
 
 
+//for password generation
 const passwordGenerator=useCallback(()=>{
 
 let pass="";
@@ -41,9 +42,11 @@ setPassword(pass);
 //working of copyPasswordToClipboard
 const copyPasswordToClipboard=useCallback(()=>{
   passwordRef.current?.select()
+
   //if you have to select specified location only
-  
   // passwordRef.current?.setSelectionRange(3,7)
+
+  
 window.navigator.clipboard.writeText(password)
 setCopied(true); // Set copied state to true
 setTimeout(() => {
