@@ -1,0 +1,47 @@
+/* Centering the content */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text for dark mode */
+  font-family: Arial, sans-serif;
+}
+
+/* Styling form elements */
+input {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+button {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6200ea;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3700b3;
+}
+
+/* Ensure div wraps the form properly */
+div {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
