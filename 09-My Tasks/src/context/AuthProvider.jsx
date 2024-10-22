@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import authContext from "./AuthContext"; // Importing the context
 import PropTypes from 'prop-types'; // Importing PropTypes to validate component props
 
-// Defining the AuthContext component as a Context Provider
-const AuthContext = ({ children }) => {
+// Defining the AuthContextProvider component as a Context Provider
+const AuthContextProvider = ({ children }) => {
   // State to manage the user data (null initially, meaning no user is logged in)
   const [user, setUser] = useState(null);
 
@@ -39,9 +39,9 @@ const AuthContext = ({ children }) => {
 };
 
 // PropTypes to enforce that the `children` prop is required and must be a React node
-AuthContext.propTypes = {
+AuthContextProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
 // Exporting the AuthContext component for use in other parts of the app
-export default AuthContext;
+export default AuthContextProvider;
