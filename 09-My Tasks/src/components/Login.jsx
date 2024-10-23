@@ -1,9 +1,9 @@
 // Login.js
 import  { useState } from 'react';
-import  authContext  from "../context/AuthContext" // Import useAuth hook
+import  AuthContextProvider  from "../context/AuthContextProvider" // Import useAuth hook
 
 const Login = () => {
-    const { login } = authContext();
+    const { login } = AuthContextProvider();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 

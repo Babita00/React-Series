@@ -1,6 +1,6 @@
-import authContext from '../context/AuthContext'
+import AuthContextProvider from '../context/AuthContextProvider'
 const Profile=()=>{
-const {user,logout}=authContext()
+const {user,logout}=AuthContextProvider()
 return(
     <>
      <div>
