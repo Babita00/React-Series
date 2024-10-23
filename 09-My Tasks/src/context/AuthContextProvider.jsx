@@ -1,6 +1,6 @@
 // Import necessary hooks and modules from React and other libraries
 import { useState, useEffect } from "react";
-import authContext from "./AuthContext"; // Importing the context
+import AuthContext from "./AuthContext"; // Importing the context
 import PropTypes from 'prop-types'; // Importing PropTypes to validate component props
 
 // Defining the AuthContextProvider component as a Context Provider
@@ -33,9 +33,9 @@ const AuthContextProvider = ({ children }) => {
   // Returning the Provider component to wrap the child components
   // and make `user`, `login`, and `logout` accessible via context
   return (
-    <authContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout }}>
       {children} {/* Render the child components inside the provider */}
-    </authContext.Provider>
+    </AuthContext.Provider>
   );
 };
 
