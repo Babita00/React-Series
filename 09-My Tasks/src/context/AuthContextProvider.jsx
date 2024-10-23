@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'; // Importing PropTypes to validate component
 
 // Defining the AuthContextProvider component as a Context Provider
 const AuthContextProvider = ({ children }) => {
+  
   // State to manage the user data (null initially, meaning no user is logged in)
   const [user, setUser] = useState(null);
 
