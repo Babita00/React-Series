@@ -1,7 +1,9 @@
 import { useContext } from 'react'
 import AuthContext from '../context/AuthContext'
 const Profile=()=>{
+    
 const {user,logout}=useContext(AuthContext)
+
 return(
     <>
      <div>

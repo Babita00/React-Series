@@ -9,10 +9,12 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        login({ email }); // Mock login, replace with API logic if needed
+        login({ email,password }); // Mock login, replace with API logic if needed
     };
 
     return (
+        <>
+        <h1>User Page</h1>
         <form onSubmit={handleSubmit}>
             <input
                 type="email"
@@ -30,6 +32,7 @@ const Login = () => {
             />
             <button type="submit">Login</button>
         </form>
+        </>
     );
 };
 
