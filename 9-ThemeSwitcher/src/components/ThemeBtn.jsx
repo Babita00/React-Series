@@ -1,7 +1,8 @@
 import useTheme from "../context/Theme";
 
 export default function ThemeBtn() {
-  const [themeMode, darkTheme, lightTheme] = useTheme();
+  const { themeMode, darkTheme, lightTheme } = useTheme();
+
   const toggleTheme = () => {
     themeMode === "light" ? darkTheme() : lightTheme();
   };
