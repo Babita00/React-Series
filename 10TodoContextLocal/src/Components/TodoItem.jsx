@@ -6,7 +6,7 @@ import useTodo from "../Context/TodoContext";
 function TodoItem({ todo }) {
   const [isTodoEditable, setIsTodoEditable] = useState(false);
   const [todoMsg, setTodoMsg] = useState(todo.todo);
-  const { updateTodo, deleteTodo, toggleComplete } = useTodo;
+  const { updateTodo, deleteTodo, toggleComplete } = useTodo();
 
   const editTodo = () => {
     updateTodo(todo.id, { ...todo, todo: todoMsg });
@@ -38,6 +38,7 @@ function TodoItem({ todo }) {
         readOnly={!isTodoEditable}
       />
       {/* Edit, Save Button */}
+
       <button
         className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0 disabled:opacity-50"
         onClick={() => {
