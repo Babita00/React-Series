@@ -7,3 +7,6 @@ const reactElement = {
   children: "Click me to visit google",
 };
 const mainContainer = document.querySelector("#root");
+
+//reactElement lai root ma render garne
+customRender(reactElement, mainContainer);
