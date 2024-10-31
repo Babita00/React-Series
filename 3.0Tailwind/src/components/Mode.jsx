@@ -1,6 +1,9 @@
 function Mode() {
   return (
     <>
+      <h1 className="text-green-600 text-center font-bold">
+        Welcome to Tailwind class
+      </h1>
       <div className="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
         <div>
           <span className="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
