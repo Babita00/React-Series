@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun } from '@fortawesome/free-solid-svg-icons'; // Import the sun icon
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun } from "@fortawesome/free-solid-svg-icons"; // Import the sun icon
 
-import './App.css';
+import "./App.css";
 
 function App() {
   const [theme, changeTheme] = useState("light");
@@ -13,13 +13,14 @@ function App() {
 
   return (
     <div className={`container ${theme}`}>
-      
-      
-
-      <button className="theme" title={`Current theme: ${theme}`} onClick={handleTheme}>
+      <button
+        className="theme"
+        title={`Current theme: ${theme}`}
+        onClick={handleTheme}
+      >
         {/* Place your icon here */}
-      
-          <FontAwesomeIcon icon={faSun} />
+
+        <FontAwesomeIcon icon={faSun} />
       </button>
     </div>
   );
