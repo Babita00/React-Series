@@ -11,15 +11,18 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import Router from "./Router.jsx";
 import Home from "./components/Home.jsx";
+// import Home from "./components/Home.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Home />}>
+    <Route path="/" element={<Router />}>
       <Route path="colors" element={<Colors />}></Route>
+      <Route path="home" element={<Home />}></Route>
       <Route path="sizing" element={<Sizing />}></Route>
-      <Route path="contact" element={<Topography />}></Route>
-      <Route path="topography" element={<Shadows />}></Route>
+      <Route path="topography" element={<Topography />}></Route>
+      <Route path="shadows" element={<Shadows />}></Route>
     </Route>
   )
 );
