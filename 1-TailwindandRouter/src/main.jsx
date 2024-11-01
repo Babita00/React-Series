@@ -1,6 +1,5 @@
 import { StrictMode } from "react";
 import "./index.css";
-import App from "./App.jsx";
 import Colors from "./components/Colors";
 import Sizing from "./components/Sizing";
 import Topography from "./components/Topography";
@@ -12,10 +11,11 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import Home from "./components/Home.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
+    <Route path="/" element={<Home />}>
       <Route path="colors" element={<Colors />}></Route>
       <Route path="sizing" element={<Sizing />}></Route>
       <Route path="contact" element={<Topography />}></Route>
