@@ -9,48 +9,50 @@ export default function Header() {
         </span>
       </div>
 
-      <ul className="flex items-center space-x-4">
-        <li>
-          <NavLink
-            to="/sizing"
-            className={({ isActive }) =>
-              isActive ? "text-blue-600" : "text-gray-600 hover:text-blue-600"
-            }
-          >
-            Sizing
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/topography"
-            className={({ isActive }) =>
-              isActive ? "text-blue-600" : "text-gray-600 hover:text-blue-600"
-            }
-          >
-            Topography
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/colors"
-            className={({ isActive }) =>
-              isActive ? "text-blue-600" : "text-gray-600 hover:text-blue-600"
-            }
-          >
-            Colors
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/shadows"
-            className={({ isActive }) =>
-              isActive ? "text-blue-600" : "text-gray-600 hover:text-blue-600"
-            }
-          >
-            Shadows
-          </NavLink>
-        </li>
-      </ul>
+      <div className="flex-grow flex justify-center">
+        <ul className="flex items-center space-x-4">
+          <li>
+            <NavLink
+              to="/sizing"
+              className={({ isActive }) =>
+                isActive ? "text-blue-600" : "text-gray-600 hover:text-blue-600"
+              }
+            >
+              Sizing
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/topography"
+              className={({ isActive }) =>
+                isActive ? "text-blue-600" : "text-gray-600 hover:text-blue-600"
+              }
+            >
+              Topography
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/colors"
+              className={({ isActive }) =>
+                isActive ? "text-blue-600" : "text-gray-600 hover:text-blue-600"
+              }
+            >
+              Colors
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/shadows"
+              className={({ isActive }) =>
+                isActive ? "text-blue-600" : "text-gray-600 hover:text-blue-600"
+              }
+            >
+              Shadows
+            </NavLink>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }
