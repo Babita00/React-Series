@@ -15,6 +15,8 @@ import {
   Route,
 } from "react-router-dom";
 import Github from "./Components/Github/Github";
+import Login from "./Components/Login/Login";
+import SignUp from "./Components/SignUp/SignUp";
 
 // const router=createBrowserRouter([{
 //   path:"/",
@@ -41,6 +43,8 @@ const router = createBrowserRouter(
       <Route path="contact" element={<Contact />}></Route>
       <Route path="user/:id" element={<User />}></Route>
       <Route path="github" element={<Github />}></Route>
+      <Route path="login" element={<Login />}></Route>
+      <Route path="signup" element={<SignUp />}></Route>
     </Route>
   )
 );
