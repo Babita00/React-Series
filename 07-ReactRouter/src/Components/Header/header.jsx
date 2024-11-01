@@ -12,20 +12,7 @@ function Header() {
               alt="Logo"
             />
           </Link>
-          <div className="flex items-center lg:order-2">
-            <Link
-              to="#"
-              className="text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
-            >
-              Log in
-            </Link>
-            <Link
-              to="#"
-              className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
-            >
-              Get started
-            </Link>
-          </div>
+
           <div
             className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
             id="mobile-menu-2"
@@ -82,6 +69,37 @@ function Header() {
                   Github
                 </NavLink>
               </li>
+              <div className="flex items-center lg:order-2">
+                <li>
+                  <NavLink
+                    to="/login"
+                    className={({ isActive }) =>
+                      `text-gray-800 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 ml-30 focus:outline-none duration-200 ${
+                        isActive
+                          ? "bg-gray-50 focus:ring-4 focus:ring-gray-300"
+                          : "hover:bg-gray-50"
+                      }`
+                    }
+                  >
+                    Log in
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink
+                    to="/signup"
+                    className={({ isActive }) =>
+                      `text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none ${
+                        isActive
+                          ? "bg-gray-50 focus:ring-4 focus:ring-gray-300"
+                          : "hover:bg-gray-50"
+                      }`
+                    }
+                  >
+                    Sign Up
+                  </NavLink>
+                </li>
+              </div>
             </ul>
           </div>
         </div>
