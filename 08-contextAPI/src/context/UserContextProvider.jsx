@@ -8,8 +8,6 @@ const UserContextProvider = ({ children }) => {
   // State to manage the user data
   const [user, setUser] = useState(null); //you can call api here
   return (
-    //wrapping the component
-
     <userContext.Provider value={{ user, setUser }}>
       {children}
     </userContext.Provider>
