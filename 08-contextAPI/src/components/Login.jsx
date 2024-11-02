@@ -22,7 +22,7 @@ function Login() {
               id="email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              className="block w-full p-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 bg-white placeholder-gray-400"
+              className="block w-full p-2 mt-2 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 bg-white placeholder-gray-400"
               placeholder="Enter email"
             />
           </div>
@@ -33,10 +33,11 @@ function Login() {
               id="password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
-              className="block w-full p-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 bg-white placeholder-gray-400"
+              className="block w-full p-2 mt-2  text-black border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 bg-white placeholder-gray-400"
               placeholder="Enter password"
             />
           </div>
+
           <button
             type="submit"
             className="w-full py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-700"
