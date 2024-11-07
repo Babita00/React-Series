@@ -9,7 +9,6 @@ function Router() {
       <Header />
       <Home />
       <Outlet />
-
       <Footer />
     </>
   );
