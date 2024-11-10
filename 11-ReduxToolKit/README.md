@@ -1,26 +1,26 @@
 # Redux ToolKit
 
-```jsx
-export const todoSlice = createSlice({
-  name: "todo",
-  initialState,
-  reducers: {
-    addTodo: () => {},
-    removeTOdo: () => {},
-  },
-});
-```
+1. `Create Store` - single source of truth
+   it has configureStore
+   introduce reducer
 
-in this code unlike useContext we not wely define functin we also define functionality here
+2. `Create Slice`(functions) method(createSlice)
+   `Slice has name, initialState, reducers :{key: function}`
+   Access of two things (State, action)
+   state = state value in the store
+   action = action.payload
+   export individual functionality
+   export main source export
 
-```jsx
-state, action;
-```
+3. Add Todo - Give values to State i.e Dispatch Courier = use method `useDispatch()`
+   `dispatch(addTodo())`
 
-- state :- current state
-- action :- whichever data is passing
+4. Take Values - `useSelector((state) =>state.todos) `state ka access chaiye
+   variable me values lelo ek baar aagaie uske baad pure JS concept hai
 
-# Code Explanation for `Remove`
+# Code Explanation
+
+## For `Remove`
 
 ```jsx
 removeTodo: (state, action) => {
