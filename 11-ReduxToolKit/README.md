@@ -231,3 +231,77 @@ updateTodo: (state, action) => {
   );
 };
 ```
+
+# Dispatch Concept
+
+```jsx
+const [input, setInput] = useState("");
+```
+
+- `useState` is a React Hook that lets you add state to your functional component.
+- Here, `input` is a state variable that holds the current value of the input field.
+- `setInput` is a function used to update the value of `input`.
+- Initially, `input` is set to an empty string `("")`.
+
+```jsx
+const dispatch = useDispathch();
+```
+
+- `useDispatch` is a Hook provided by React-Redux.
+- It gives you access to the Redux store's `dispatch` function, which allows you to send (or "dispatch") actions to your Redux store.
+  By calling `useDispatch()`, you get the dispatch function which you can use to trigger actions like `addTodo`, `removeTodo`, etc.
+
+```jsx
+const addTodoHandler = (e) => {
+  e.preventDefault();
+  dispatch(addTodo(input));
+  setInput("");
+};
+```
+
+1. e.preventDefault();
+
+- This prevents the default behavior of the form submission.
+- By default, submitting a form reloads the page, but here we want to handle the form submission with JavaScript only, so we prevent the page from reloading.
+
+2. dispatch(addTodo(input));
+
+- This line dispatches an action to the Redux store.
+- The `addTodo` function is an action creator imported from your `TodoSlice`.
+- When you call `addTodo(input)`, it returns an action object like:
+
+```jsx
+{ type: "todo/addTodo", payload: input }
+```
+
+- `dispatch` sends this action to the Redux store.
+- The Redux store will then pass this action to the relevant reducer (in this case, your `addTodo` reducer), which will update the state based on the action.
+
+3. setInput("");
+
+- This line resets the input field to an empty string after adding a new todo.
+- It updates the `input` state to `""`, which clears the text box.
+
+## How dispatch Works in This Example
+
+When you type something in the input field and press the "Add Todo" button:
+
+1. State is Updated:
+
+   - Whatever you type is stored in the input state via setInput(e.target.value).
+
+2. Form Submission:
+
+- When you submit the form, `addTodoHandler` is triggered.
+
+3. Action is Dispatched:
+
+- The `dispatch(addTodo(input))` line creates an action with the current input value as its payload and sends it to your Redux store.
+
+4. Redux Reducer Updates State:
+
+- The addTodo reducer in your TodoSlice takes this action and adds the new todo to the todos array in your Redux state.
+
+5. Input is Cleared:
+
+- `setInput("")` clears the input field for the next todo.
