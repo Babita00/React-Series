@@ -152,3 +152,82 @@ removeTodo: (state, action) => {
   state.todos = state.todos.filter((todo) => todo.id !== id);
 };
 ```
+
+# Code Explanation for `Update`
+
+#### 1. Purpose:
+
+- The `updateTodo` function is used to update a specific todo in the todos array.
+
+#### 2. Parameters:
+
+- `state`: The current state of the slice.
+- `action`: Contains the data to update, passed through `action.payload`.
+
+#### 3. How It Works:
+
+`action.payload` is expected to have:
+
+```jsx
+{
+  id, updatedData;
+}
+```
+
+- `id`: The ID of the todo to be updated.
+- `updatedData`: An object with the new values for the todo.
+
+- It uses the `map()` method to go through each `todo` in the `todos` array.
+  - If `todo.id` matches the `id` from `action.payload`, it updates that todo with the new data using` { ...todo, ...updatedData }`.
+  - If `todo.id` does not match, it keeps the `todo` as it is.
+
+## Example Walkthrough
+
+Suppose your state looks like this:
+
+```jsx
+state = {
+  todos: [
+    { id: 1, title: "Learn React", completed: false },
+    { id: 2, title: "Build a Redux app", completed: true },
+    { id: 3, title: "Explore Redux Toolkit", completed: false },
+  ],
+};
+```
+
+If you dispatch this action:
+
+```jsx
+action = {
+  type: "todo/updateTodo",
+  payload: {
+    id: 2,
+    updatedData: { title: "Build an advanced Redux app", completed: false },
+  },
+};
+```
+
+Here's what happens:
+
+- The `updateTodo` reducer will find the todo with `id: 2`.
+- It will update the `title` and completed properties based on `updatedData`.
+
+Updated `todos` array:
+
+```jsx
+[
+  { id: 1, title: "Learn React", completed: false },
+  { id: 2, title: "Build an advanced Redux app", completed: false },
+  { id: 3, title: "Explore Redux Toolkit", completed: false },
+];
+```
+
+#### updateTodo can be written as:-
+
+```jsx
+updateTodo: (state, action) => {
+  state.todos = state.todos.map((todo) =>
+    todo.id === action.payload.id ? { ...todo, ...action.payload } : todo
+  );
+};
+```
