@@ -1,4 +1,14 @@
+import { useState } from "react";
+import { useDispathch } from "react-redux";
+import { addTodo, removeTodo } from "../Feature/Todo/TodoSlice";
 function AddTodo() {
+  const [input, setInput] = useState("");
+  const dispatch = useDispathch();
+  const addTodoHandler = (e) => {
+    e.preventDefault();
+    dispatch(addTodo(input));
+    setInput("");
+  };
   return (
     <form onSubmit={addTodoHandler} className="space-x-3 mt-12">
       <input
