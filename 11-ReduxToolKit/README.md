@@ -305,3 +305,70 @@ When you type something in the input field and press the "Add Todo" button:
 5. Input is Cleared:
 
 - `setInput("")` clears the input field for the next todo.
+
+6. Looping Through the Todos Array
+
+```jsx
+{
+  todos.map((todo) => (
+    <li key={todo.id}>
+      {todo.text}
+      <button onClick={() => dispatch(removeTodo(todo.id))}>X</button>
+    </li>
+  ));
+}
+```
+
+Explanation:
+`{todos.map(...)}:`
+
+- This loops through each todo in the todos array.
+- todo represents each individual object in the array.
+
+  Example: If todos is:
+
+```jsx
+[
+  { id: 1, text: "Learn Redux" },
+  { id: 2, text: "Build a project" },
+];
+```
+
+The map function will go through each item one by one.
+
+First Iteration:
+
+`todo is { id: 1, text: "Learn Redux" }`
+
+Renders:
+
+```jsx
+<li key={1}>
+  Learn Redux
+  <button onClick={() => dispatch(removeTodo(1))}>X</button>
+</li>
+```
+
+Second Iteration:
+
+`todo is { id: 2, text: "Build a project" }`
+Renders:
+
+```jsx
+<li key={2}>
+  Build a project
+  <button onClick={() => dispatch(removeTodo(2))}>X</button>
+</li>
+```
+
+Line Breakdown:
+
+- `<li key={todo.id}>:`
+  Creates a list item (<li>) for each todo.
+
+- `key={todo.id}` is a unique identifier for React to efficiently manage the list. -` {todo.text}`: Displays the text of the todo, like "Learn Redux".
+
+` <button onClick={() => dispatch(removeTodo(todo.id))}>X</button>:`
+
+- This button, when clicked, will dispatch the `removeTodo` action with the todo.id as a parameter.
+- This means it will remove the todo item with the matching id from the list.
