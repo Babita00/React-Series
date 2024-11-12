@@ -22,8 +22,8 @@ export const todoSlice = createSlice({
 
     updateTodo: (state, action) => {
       const { id, updateData } = action.payload;
-      state.todos = state.todos.map((todo) =>
-        todo.id === id ? { ...todo, ...updateData } : { todo }
+      state.todos = state.todos.map(
+        (todo) => (todo.id === id ? { ...todo, ...updateData } : todo) // Fixed this line
       );
     },
   },
