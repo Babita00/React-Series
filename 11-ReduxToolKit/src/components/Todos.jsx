@@ -44,7 +44,8 @@ function Todos() {
                   onClick={() => handleUpdate(todo.id)}
                   className="text-white bg-green-500 py-1 px-4 hover:bg-green-600 rounded"
                 >
-                  Save
+                  📁
+                  {/* save */}
                 </button>
               </div>
             ) : (
@@ -56,7 +57,8 @@ function Todos() {
                     onClick={() => handleEditClick(todo)}
                     className="text-white bg-yellow-500 py-1 px-4 hover:bg-yellow-600 rounded"
                   >
-                    Edit
+                    ✏️
+                    {/* edit */}
                   </button>
                   {/* Delete Button */}
                   <button
