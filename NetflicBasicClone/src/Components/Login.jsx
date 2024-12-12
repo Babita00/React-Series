@@ -8,6 +8,7 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log("Form submitted", { email, password });
     if (!email || !password) {
       setError("Please fill in both email and password");
     } else {
@@ -15,38 +16,43 @@ function Login() {
       navigate("/home");
     }
   };
+
   return (
     <>
-      <div className="flex justify-center item-center h-96 bg-dark ">
-        <div className="bg-black  bg-opacity-85 w-96 rounded-lg">
-          <h2 className="text-2xl text-white font-bold mt-4 flex justify-center item-center">
+      <div className="flex justify-center items-center h-screen bg-dark">
+        <div className="bg-black bg-opacity-85 w-96 rounded-lg p-6">
+          <h2 className="text-2xl text-white font-bold mb-6 text-center">
             Sign In
           </h2>
           <form onSubmit={handleSubmit}>
-            <div className="mb-4 flex text-black ">
+            {/* Input: Email */}
+            <div className="mb-4">
               <input
                 type="text"
                 value={email}
                 placeholder="Email or Mobile Number"
-                className="w-full p-2 mx-2 border bg-black bg-opacity-85 text-white placeholder-white rounded-lg h-16"
+                className="w-full p-4 border border-gray-300 bg-black bg-opacity-85 text-white placeholder-white rounded-lg"
                 onChange={(event) => setEmail(event.target.value)}
               />
             </div>
-
-            <div className="mb-4 flex text-black ">
+            {/* Input: Password */}
+            <div className="mb-4">
               <input
                 type="password"
                 value={password}
                 placeholder="Password"
-                className="w-full p-2 mx-2 border bg-black bg-opacity-85 text-white placeholder-white rounded-lg h-16"
+                className="w-full p-4 border border-gray-300 bg-black bg-opacity-85 text-white placeholder-white rounded-lg"
                 onChange={(event) => setPassword(event.target.value)}
               />
             </div>
-            {error && <div className="mb-4 text-red-500">{error}</div>}
-
+            {/* Error Message */}
+            {error && (
+              <div className="mb-4 text-red-500 text-center">{error}</div>
+            )}
+            {/* Button: Sign In */}
             <button
               type="submit"
-              className="w-full mt-4 mx-2 h-16 bg-red-500 text-white rounded-lg hover:bg-red-300"
+              className="w-full h-16 bg-red-500 text-white font-bold rounded-lg hover:bg-red-400 transition-colors"
             >
               Sign In
             </button>
