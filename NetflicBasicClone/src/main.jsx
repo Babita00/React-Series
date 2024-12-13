@@ -10,12 +10,14 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import Profile from "./Components/Profile";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Router />}>
       <Route path="login" element={<Login />}></Route>
       <Route path="home" element={<Home />}></Route>
+      <Route path="profile" element={<Profile />}></Route>
     </Route>
   )
 );
