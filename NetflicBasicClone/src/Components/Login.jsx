@@ -1,19 +1,33 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     console.log("Form submitted", { email, password });
     if (!email || !password) {
       setError("Please fill in both email and password");
     } else {
-      setError(null);
-      navigate("/home");
+      try {
+        const response = await axios.get(
+          `https://jsonplaceholder.typicode.com/users/2`
+        );
+        const result = await response.data;
+        if (result.status) {
+          setError(null);
+          navigate("/home");
+        } else {
+          //
+        }
+      } catch (error) {
+        setError("Failed to fetch user details", error);
+      }
     }
   };
 

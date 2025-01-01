@@ -8,15 +8,15 @@ function Home() {
       <p className="text-lg">
         Ready to watch? Enter your email to create or restart your membership.
       </p>
-      <div className="flex gap-2">
+      <div className="flex gap-2 w-full">
         <input
           type="text"
           placeholder="Enter Address"
-          className="w-full p-2 mt-2 border bg-black bg-opacity-85 text-white placeholder-white rounded-lg h-16"
+          className="w-1/2 p-2 mx-4 mt-2 border bg-black bg-opacity-85 text-white  placeholder-white rounded-lg h-16 flex justify-center text-center"
         />
         <button
           type="submit"
-          className="w-1/2 p-2 mt-2 h-16 bg-red-500 text-white font-bold rounded-lg hover:bg-red-300"
+          className="w-1/4 p-2 mt-2 h-16 bg-red-500 text-white font-bold rounded-lg hover:bg-red-300"
         >
           Get Started
         </button>

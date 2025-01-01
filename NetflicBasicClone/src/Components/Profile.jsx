@@ -15,7 +15,7 @@ function Profile() {
         );
         setUser(response.data);
       } catch (error) {
-        setError("Failed to fetch user details");
+        setError("Failed to fetch user details", error);
       }
     };
 
