@@ -8,6 +8,7 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
 import User from "./Components/User/User";
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -37,6 +38,7 @@ import SignUp from "./Components/SignUp/SignUp";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
+  
     <Route path="/" element={<Router />}>
       <Route path="home" element={<Home />}></Route>
       <Route path="about" element={<About />}></Route>
