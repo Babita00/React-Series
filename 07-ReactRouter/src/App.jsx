@@ -7,11 +7,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      {/* <Header/>
-   <Home/>
-   <Footer/> */}
-      {/* we don't need this since we use router */}
-      {/* we even don't nned app.jsx}*/}
+
     </>
   );
 }
